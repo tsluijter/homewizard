@@ -20,8 +20,8 @@ def get_token():
     payload = {
         'name': f'local/{username}'
     }
-    print(f"Requesting token from {api_url} for user {username}")
 
+    # Push the button on the HomeWizard device during following loop
     access_token = None
     while not access_token:
         response = requests.post(api_url, json=payload, headers=headers, verify=False)
